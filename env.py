@@ -2,7 +2,7 @@ import logging
 import os
 
 openaiApiKeyEnv = "OPENAI_API_KEY"
-openaiApiKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+openaiApiKey = "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"
 
 def setenv():
     if openaiApiKeyEnv in os.environ:
