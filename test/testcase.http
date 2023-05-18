@@ -1,0 +1,12 @@
+POST http://192.168.64.27:30001/ask
+Accetp: application/json
+Content-type: application/json
+
+{
+  "messages": [
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "What's next actoin on AI field?"}
+  ],
+  "temperature": 0.5,
+  "max_tokens": 50
+}
