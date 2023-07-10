@@ -2,12 +2,10 @@ import os
 
 import openai
 
-import env
-
-
+from dotenv import load_dotenv
 
 def Ask_ChatGPT(message):
-    openai.api_key = os.environ["OPENAI_API_KEY"]
+    openai.api_key = os.environ.get("OPENAI_API_KEY")
 
     response = openai.Completion.create(
         engine="text-davinci-002",
@@ -26,7 +24,7 @@ def Ask_ChatGPT(message):
     return response
 
 if __name__ == '__main__':
-    env.setenv()
+    load_dotenv()
     message = "大谷翔平について教えて";
     res = Ask_ChatGPT(message)
 

@@ -2,11 +2,11 @@ import json
 import logging
 import os
 import requests
-import env
+from dotenv import load_dotenv
 import argparse
 
-env.setenv()
-api_key = os.environ["OPENAI_API_KEY"]
+load_dotenv()
+api_key = os.environ.get("OPENAI_API_KEY")
 url = "https://api.openai.com/v1/chat/completions"
 headers = {
     "Content-Type": "application/json",
