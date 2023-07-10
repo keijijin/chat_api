@@ -12,7 +12,7 @@ Content-type: application/json
 }
 
 ###
-POST http://compes.serveo.net/ask
+POST https://chat-api-qi91.onrender.com/ask
 Accetp: application/json
 Content-type: application/json
 
