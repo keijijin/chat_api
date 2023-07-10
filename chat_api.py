@@ -2,12 +2,12 @@ import json
 import logging
 import os
 import requests
-import env
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from dotenv import load_dotenv
+load_dotenv()
 
-env.setenv()
-api_key = os.environ["OPENAI_API_KEY"]
+api_key = os.environ.get("OPENAI_API_KEY")
 url = "https://api.openai.com/v1/chat/completions"
 headers = {
     "Content-Type": "application/json",

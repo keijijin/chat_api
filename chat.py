@@ -3,11 +3,11 @@ import logging
 import os
 import openai
 import requests
-import env
 import argparse
+from dotenv import load_dotenv
+load_dotenv()
 
-env.setenv()
-api_key = os.environ["OPENAI_API_KEY"]
+api_key = os.environ.get("OPENAI_API_KEY")
 
 def Ask_ChatGPT(message, temperature=0.5, max_tokens=50):
     # print("temp: {}".format(temperature))
