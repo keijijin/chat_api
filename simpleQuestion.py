@@ -14,7 +14,7 @@ headers = {
     "Authorization": f"Bearer {api_key}",
 }
 data = {
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-3.5-turbo-16k-0613",
     "messages": [{"role": "user", "content": "大谷翔平について教えて"}]
 }
 
@@ -22,3 +22,4 @@ response = requests.post(url, headers=headers, data=json.dumps(data))
 response_json = response.json()
 
 print(response_json["choices"][0]["message"]["content"].strip())
+# print(response_json)

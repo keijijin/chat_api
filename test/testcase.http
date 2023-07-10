@@ -12,7 +12,7 @@ Content-type: application/json
 }
 
 ###
-POST https://chat-api-qi91.onrender.com/ask
+POST https://testcase.onrender.com/ask
 Accetp: application/json
 Content-type: application/json
 

@@ -11,7 +11,7 @@ def Ask_ChatGPT(message):
         engine="text-davinci-002",
         prompt=(
             "You are a helpful assistant.\n"
-            "User: Translate this English text to French: 'Hello, how are you?'"
+            f"User: {message}"
         ),
         max_tokens=50,
         n=1,
